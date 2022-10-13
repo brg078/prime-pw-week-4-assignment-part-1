@@ -67,17 +67,28 @@ console.log(getLast([1, 2, 5, 4, 7]));
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
 
 
+//function find( value, array ){
+//  for (let i=0; i<array.length; i++){
+//    console.log('array value found?', array[i]);
+//    console.log(value)
+//    if (array[i] = value) {
+//      return true;
+//    } else {
+//      return false;
+//    }
+//  }
+//}  FIRST ATTEMPT - FAILED
+
 function find( value, array ){
-  for (let i=0; i<array.length; i++){
-    console.log('array value found?', array[i]);
-    console.log(value)
-    if (array[i] = value) {
+  for (num in array) {
+    if (num == value) {
       return true;
-    } else {
-      return false;
     }
   }
+
+  return false;
 }
+
 console.log(find(5, [1,2,3,4]))
 console.log(find(2, [1,2,3,4]))
 
@@ -104,13 +115,14 @@ console.log( 'isFirstLetter - should say false', isFirstLetter('z', 'apple') );
 
 
 // 9. Function to return the sum of all numbers in an array
-function sumAll(sum) {
-  let sum = sum.reduce;
+//function sumAll() {
+//  let sum = 0
+//  for 
   // TODO: loop to add items
-  return sum;
-}
-let totale = [1,2,3,4,5];
-console.log(sumAll(totale));
+//  return sum;
+//}
+//let totale = [1,2,3,4,5];
+//console.log(sumAll(totale));
 
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
